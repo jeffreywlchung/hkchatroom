@@ -1,4 +1,5 @@
 {
+  "root": "public/",
   "proxies": {
     "/api/": {
       "origin": "https://chatroom-hk.herokuapp.com/api/"
