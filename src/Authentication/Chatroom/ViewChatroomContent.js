@@ -29,7 +29,7 @@ class ViewChatroomContent extends Component {
     // Send API
     axios.get('/api/checkNewMsg/' + this.props.getActiveStringKey())
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       if (response.data.msgId) {
         if (response.data.msgId !== currentMsgId) {
           this.props.setActiveLastMsgId(response.data.msgId);
@@ -38,7 +38,7 @@ class ViewChatroomContent extends Component {
       }
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
     });
   }
 
@@ -46,13 +46,13 @@ class ViewChatroomContent extends Component {
     // Send API
     axios.get('/api/getchat/' + this.props.getActiveStringKey())
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       if (response.data.msgPack) {
         this.props.setActiveChatroomMsgPack(response.data.msgPack);
       }
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
     });
   }
 
@@ -70,7 +70,7 @@ class ViewChatroomContent extends Component {
     event.preventDefault(); 
     if (!(this.state.message === '')) {
       var now = new moment();
-      console.log("now " + now);
+      // console.log("now " + now);
       // Send API
       axios.post('/api/postmessage/' + this.props.getActiveChatroomID(), {
         content: this.state.message,
@@ -78,11 +78,11 @@ class ViewChatroomContent extends Component {
         time: now.format("HH:mm:ss")
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         this.setState({message: ''});
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
     }
   }
@@ -108,7 +108,7 @@ class ViewChatroomContent extends Component {
     let noMsg = null;
     var msgItems = [];
     var msgPack = this.props.getActiveChatroomMsgPack();
-    console.log(msgPack);
+    // console.log(msgPack);
     if (msgPack.length > 0) {
       msgItems = msgPack.map((msg) => {
         if (msg.isDateAppeared) {

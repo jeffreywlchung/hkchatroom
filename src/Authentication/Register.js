@@ -52,7 +52,7 @@ class Register extends Component {
         displayName: this.state.displayNameReg
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         if (response.data.err) {
           this.setState({error: response.data.err});
         } else {
@@ -63,7 +63,7 @@ class Register extends Component {
         }
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
     }
   }

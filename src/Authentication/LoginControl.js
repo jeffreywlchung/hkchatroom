@@ -59,13 +59,13 @@ class LoginControl extends Component {
       chatroomKey: chatroomKey
     })
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       if (response.data.err) {
         this.setState({error: response.data.err});
       }
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
     });
   }
 
@@ -77,13 +77,13 @@ class LoginControl extends Component {
     //Send API
     axios.get('/api/logout')
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       this.setLogin(false, '', '', []);
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
     });
-    console.log(this.state.isLoggedIn);
+    // console.log(this.state.isLoggedIn);
   }
 
   register() {
@@ -107,7 +107,7 @@ class LoginControl extends Component {
       }
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
     });
   }
 

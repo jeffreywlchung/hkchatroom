@@ -26,7 +26,7 @@ class CreateChatroom extends Component {
 
   handleSubmit(event) {
     event.preventDefault(); 
-    console.log(this.state)
+    // console.log(this.state)
     if (this.state.chatroomName === '') {
       this.setState({error: "Please fill in a name."});
     } else {
@@ -35,7 +35,7 @@ class CreateChatroom extends Component {
         name: this.state.chatroomName
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         if (response.data.err) {
           this.setState({error: response.data.err});
         } else {
@@ -46,7 +46,7 @@ class CreateChatroom extends Component {
         }
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
     }
   }

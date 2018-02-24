@@ -40,7 +40,7 @@ class Login extends Component {
         password: this.state.password
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         if (response.data.err) {
           this.setState({error: response.data.err});
         } else {
@@ -49,7 +49,7 @@ class Login extends Component {
         }
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
     }
   }

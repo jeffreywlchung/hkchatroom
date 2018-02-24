@@ -29,7 +29,7 @@ class JoinChatroom extends Component {
     // Send API
     axios.get('/api/getchat/' + key)
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       if (response.data.err) {
         this.setState({error: response.data.err});
       } else {
@@ -39,20 +39,20 @@ class JoinChatroom extends Component {
       }
     })
     .catch(function (error) {
-      console.log(error);
+      // console.log(error);
     });
   }
 
   handleSubmit(event) {
     event.preventDefault(); 
-    console.log(this.state)
+    // console.log(this.state)
     if (!this.state.chatroomKey) {
       this.setState({error: "Please fill in a key."});
     } else {
       // Send API
       axios.get('/api/getchat/' + this.state.chatroomKey)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         if (response.data.err) {
           this.setState({error: response.data.err});
         } else {
@@ -65,7 +65,7 @@ class JoinChatroom extends Component {
         }
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
     }
   }
