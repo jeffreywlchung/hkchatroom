@@ -33,6 +33,7 @@ class JoinChatroom extends Component {
       if (response.data.err) {
         this.setState({error: response.data.err});
       } else {
+        this.setState({'chatroomKey': ''});
         this.props.setViews(false);
         this.props.setActiveChatroom(response.data.chatroomID, response.data.chatroomName, response.data.stringKey, response.data.largestMsgId);
         this.props.setActiveChatroomMsgPack(response.data.msgPack);

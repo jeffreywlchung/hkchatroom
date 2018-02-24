@@ -147,7 +147,7 @@ class LoginControl extends Component {
                   } else {
                     this.login();
                   }
-                }}>Chatroom</a>
+                }}>HKChat</a>
               </Navbar.Brand>
             </Navbar.Header>
             <Navbar.Text>

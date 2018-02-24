@@ -93,7 +93,7 @@ class ViewChatroomContent extends Component {
   
   componentDidMount() {
     this.scrollToBottom();
-    this.interval = setInterval(this.checkMsg, 1000);
+    this.interval = setInterval(this.checkMsg, 500);
   }
 
   componentWillUnmount() {
