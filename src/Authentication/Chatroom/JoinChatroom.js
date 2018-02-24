@@ -57,7 +57,7 @@ class JoinChatroom extends Component {
           this.setState({error: response.data.err});
         } else {
           this.setState({error: ""});
-          this.setState({'chatroomKey': ''});
+          this.setState({chatroomKey: ""});
           this.props.setViews(false);
           this.props.setActiveChatroom(response.data.chatroomID, response.data.chatroomName, response.data.stringKey, response.data.largestMsgId);
           this.props.appendChatroomList(response.data.chatroomName, response.data.stringKey);
